@@ -4,6 +4,15 @@ Web search for [elizaOS](https://elizaos.ai) agents through [SERPdive](https://s
 
 Measured, not asserted: on a [public, replayable 1,000-question benchmark](https://github.com/edendalexis/serpdive-benchmark) judged blind by an independent model, SERPdive runs at the same speed as Tavily, feeds the LLM **20.2% fewer tokens**, and wins **60.7% of decided quality duels** against Tavily's default search.
 
+## Requirements
+
+**elizaOS 2.x (`@elizaos/core` >= 2.0.3-beta.7).** This plugin implements the
+2.x web-search contract — `ServiceType.WEB_SEARCH` via `IWebSearchService`, plus
+the search-category registration added in 2.x. Those APIs do not exist in the
+1.7 line, so the plugin will not load there. elizaOS `main` and `develop` are
+both on 2.0.3-beta.7; if `elizaos --version` reports 1.x, install the 2.x core
+(`@elizaos/core@beta`) before adding this plugin.
+
 ## Install
 
 ```bash

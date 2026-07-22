@@ -50,7 +50,7 @@
     "serpdive": "^0.1.0"
   },
   "peerDependencies": {
-    "@elizaos/core": ">=2.0.3-beta.7"
+    "@elizaos/core": "^2.0.3-beta.7"
   },
   "devDependencies": {
     "@biomejs/biome": "2.5.4",
