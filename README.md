@@ -1,5 +1,7 @@
 # plugin-serpdive
 
+![SERPdive](images/banner.png)
+
 Web search for [elizaOS](https://elizaos.ai) agents through [SERPdive](https://serpdive.com). One call returns the extracted, answer-ready content of each source page instead of a list of links, cleaned and sized for a context window, so your agent can quote and cite facts straight from the response.
 
 Measured, not asserted: on a [public, replayable 1,000-question benchmark](https://github.com/edendalexis/serpdive-benchmark) judged blind by an independent model, SERPdive runs at the same speed as Tavily, feeds the LLM **20.2% fewer tokens**, and wins **60.7% of decided quality duels** against Tavily's default search.
