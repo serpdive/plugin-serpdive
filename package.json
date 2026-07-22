@@ -1,0 +1,82 @@
+{
+  "name": "plugin-serpdive",
+  "version": "0.1.0",
+  "description": "Web search for elizaOS agents that returns extracted, answer-ready page content instead of links. A Tavily alternative: same speed, 20.2% fewer tokens, 60.7% of decided quality duels won on a public benchmark.",
+  "type": "module",
+  "license": "MIT",
+  "author": "SERPdive <contact@serpdive.com>",
+  "homepage": "https://serpdive.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/serpdive/plugin-serpdive.git"
+  },
+  "bugs": {
+    "url": "https://github.com/serpdive/plugin-serpdive/issues"
+  },
+  "keywords": [
+    "elizaos",
+    "elizaos-plugin",
+    "web-search",
+    "search",
+    "serpdive",
+    "tavily-alternative",
+    "ai-agents",
+    "rag"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "eliza-source": {
+        "types": "./src/index.ts",
+        "import": "./src/index.ts",
+        "default": "./src/index.ts"
+      },
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "images",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "serpdive": "^0.1.0"
+  },
+  "peerDependencies": {
+    "@elizaos/core": ">=2.0.3-beta.7"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.4",
+    "@elizaos/core": "2.0.3-beta.7",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.7"
+  },
+  "scripts": {
+    "build": "tsup --format esm --dts",
+    "dev": "tsup --format esm --dts --watch",
+    "test": "vitest run --config ./vitest.config.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "lint:check": "bunx @biomejs/biome check .",
+    "lint": "bunx @biomejs/biome check --write --unsafe ."
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "agentConfig": {
+    "pluginType": "elizaos:plugin:1.0.0",
+    "pluginParameters": {
+      "SERPDIVE_API_KEY": {
+        "type": "string",
+        "description": "SERPdive API key. Free at https://serpdive.com/dashboard/keys, 1,000 credits every month, no card."
+      }
+    }
+  }
+}
