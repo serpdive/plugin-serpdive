@@ -1,6 +1,6 @@
 {
   "name": "plugin-serpdive",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Web search for elizaOS agents that returns extracted, answer-ready page content instead of links. A Tavily alternative: same speed, 20.2% fewer tokens, 60.7% of decided quality duels won on a public benchmark.",
   "type": "module",
   "license": "MIT",
@@ -42,6 +42,7 @@
   },
   "files": [
     "dist",
+    "elizaos.plugin.json",
     "images",
     "README.md",
     "LICENSE"

@@ -1,0 +1,28 @@
+{
+  "id": "serpdive",
+  "name": "SERPdive Web Search",
+  "description": "Web search that returns extracted, answer-ready page content instead of links.",
+  "version": "0.1.1",
+  "kind": "plugin",
+
+  "requiredSecrets": ["SERPDIVE_API_KEY"],
+
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "SERPDIVE_API_KEY": {
+        "type": "string",
+        "description": "SERPdive API key. Free at https://serpdive.com/dashboard/keys, 1,000 credits every month, no card."
+      }
+    },
+    "required": ["SERPDIVE_API_KEY"]
+  },
+
+  "uiHints": {
+    "SERPDIVE_API_KEY": {
+      "label": "SERPdive API key",
+      "type": "password",
+      "sensitive": true
+    }
+  }
+}
